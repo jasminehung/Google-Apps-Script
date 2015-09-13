@@ -1,0 +1,108 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
+</head>
+<title>
+
+</title>
+
+<style>
+body{
+font-family: Microsoft JhengHei;
+background-color:#EDEDED;
+margin: 35px;
+color: #6C6C6C;
+font-size: 16px;
+/*background: #80D1BC url(http://icons.iconarchive.com/icons/pelfusion/long-shadow-media/512/Message-Bubble-icon.png) center center fixed no-repeat; */
+}
+
+textarea { width: 270px;  height: 8em; }
+#Q, #name, #dep,#tel { width: 180px; }
+</style>
+
+
+<body>
+<center><h1>聯絡我們 Contact Us</h1>
+<div style="background-color:#990000;height:3px;width:330px;"> </div>
+
+<br>
+<div style="color:#898989;">
+歡迎留言提供您寶貴的意見與回饋</div>
+</center>
+<form class="form-horizontal">
+
+<table style="margin-left:1.6cm;margin-left:1cm;">
+<tr>
+<td width="420px" ><br>
+
+ <div class="form-group">
+     <label for="Q" class="control-label col-xs-3"> 類別 : </label>
+ <div class="col-xs-9">   
+<select class="form-control" id="Q" name="Q">
+   <option >建議回饋</option>
+   <option >問題諮詢</option>
+   <option >錯誤回報</option>
+   <option >其他</option>
+</select>
+ </div>
+ </div>
+    
+        <div class="form-group">
+            <label for="name" class="control-label col-xs-3"> 姓名: </label>
+            <div class="col-xs-9">   
+                <input id="name" name="name" type="text"  class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="dep" class="control-label col-xs-3">處室:</label>
+            <div class="col-xs-9">
+                <input id="dep" name="dep" type="text"  class="form-control" />
+            </div>
+        </div>
+            <div class="form-group">
+            <label for="tel" class="control-label col-xs-3">分機:</label>
+            <div class="col-xs-9">
+               <input id="tel" name="tel" type="text"  class="form-control" />
+            </div>
+        </div>  
+ </td>
+ 
+ <td width="47%"><br>
+    <b>留言內容: <b> (必填)
+    <p><textarea id="message" name="message" type="text" cols="30" rows="6" class="form-control" required></textarea></p>
+
+
+
+<center>
+   <input onclick="formSubmit()" type="submit" value="留言" class="btn btn-default" />
+ </center>  
+</td>
+</tr>
+</table>
+</form>
+</body>  
+
+
+ <script type="text/javascript">
+      function formSubmit() { 
+      var elem = document.getElementById("message"); 
+         if(elem.value.length ==0){ }
+
+     else{    
+       alert("*****************已收到您的回覆!******************");
+       google.script.run.getValuesFromForm(document.forms[0]);//??????  
+ 
+   //送出後清空表單
+   $("form").find(":text,textarea").each(function() {
+                $(this).val("");  });                          
+    }      
+    }     
+        
+ </script>
+
+</form>
