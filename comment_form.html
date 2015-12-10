@@ -27,12 +27,12 @@ textarea { width: 270px;  height: 8em; }
 
 
 <body>
-<center><h1>Ápµ¸§Ú­Ì Contact Us</h1>
+<center><h1>Contact Us</h1>
 <div style="background-color:#990000;height:3px;width:330px;"> </div>
 
 <br>
 <div style="color:#898989;">
-Åwªï¯d¨¥´£¨Ñ±zÄ_¶Qªº·N¨£»P¦^õX</div>
+Welcome to provide your comments and feedbacks </div>
 </center>
 <form class="form-horizontal">
 
@@ -41,31 +41,31 @@ textarea { width: 270px;  height: 8em; }
 <td width="420px" ><br>
 
  <div class="form-group">
-     <label for="Q" class="control-label col-xs-3"> Ãþ§O : </label>
+     <label for="Q" class="control-label col-xs-3"> Category : </label>
  <div class="col-xs-9">   
 <select class="form-control" id="Q" name="Q">
-   <option >«ØÄ³¦^õX</option>
-   <option >°ÝÃD¿Ô¸ß</option>
-   <option >¿ù»~¦^³ø</option>
-   <option >¨ä¥L</option>
+   <option >Feedback</option>
+   <option >Question</option>
+   <option >Error report</option>
+   <option >Others</option>
 </select>
  </div>
  </div>
     
         <div class="form-group">
-            <label for="name" class="control-label col-xs-3"> ©m¦W: </label>
+            <label for="name" class="control-label col-xs-3"> Name: </label>
             <div class="col-xs-9">   
                 <input id="name" name="name" type="text"  class="form-control" />
             </div>
         </div>
         <div class="form-group">
-            <label for="dep" class="control-label col-xs-3">³B«Ç:</label>
+            <label for="dep" class="control-label col-xs-3">Department:</label>
             <div class="col-xs-9">
                 <input id="dep" name="dep" type="text"  class="form-control" />
             </div>
         </div>
             <div class="form-group">
-            <label for="tel" class="control-label col-xs-3">¤À¾÷:</label>
+            <label for="tel" class="control-label col-xs-3">Tel:</label>
             <div class="col-xs-9">
                <input id="tel" name="tel" type="text"  class="form-control" />
             </div>
@@ -73,13 +73,13 @@ textarea { width: 270px;  height: 8em; }
  </td>
  
  <td width="47%"><br>
-    <b>¯d¨¥¤º®e: <b> (¥²¶ñ)
+    <b>Message: <b> (Required)
     <p><textarea id="message" name="message" type="text" cols="30" rows="6" class="form-control" required></textarea></p>
 
 
 
 <center>
-   <input onclick="formSubmit()" type="submit" value="¯d¨¥" class="btn btn-default" />
+   <input onclick="formSubmit()" type="submit" value="ç•™è¨€" class="btn btn-default" />
  </center>  
 </td>
 </tr>
@@ -94,10 +94,10 @@ textarea { width: 270px;  height: 8em; }
          if(elem.value.length ==0){ }
 
      else{    
-       alert("*****************¤w¦¬¨ì±zªº¦^ÂÐ!******************");
-       google.script.run.getValuesFromForm(document.forms[0]);//??????  
+       alert("*****************We Got Your Message******************");
+       google.script.run.getValuesFromForm(document.forms[0]); //??????  
  
-   //°e¥X«á²MªÅªí³æ
+   //Refresh the form after submitted
    $("form").find(":text,textarea").each(function() {
                 $(this).val("");  });                          
     }      
