@@ -12,40 +12,40 @@ function doGet(){
   var grid = app.createGrid(8, 4).setId('myGrid');
   
   var listBox = app.createListBox().setName('myList').setWidth('80px');
-  listBox.addItem('«ØÄ³¦^õX');
-  listBox.addItem('°İÃD¿Ô¸ß');
-  listBox.addItem('¿ù»~¦^³ø');
-  listBox.addItem('¨ä¥L');
+  listBox.addItem('å»ºè­°å›é¥‹');
+  listBox.addItem('å•é¡Œè«®è©¢');
+  listBox.addItem('éŒ¯èª¤å›å ±');
+  listBox.addItem('å…¶ä»–');
   
 //  var handler = app.createServerChangeHandler('showSelectedinfo');
 //  handler.addCallbackElement(listBox);
 //  listBox.addChangeHandler(handler);
-  var infoLabel = app.createLabel('½Ğ¿ï¾Ü¯d¨¥Ãş§O').setId('info');
+  var infoLabel = app.createLabel('è«‹é¸æ“‡ç•™è¨€é¡åˆ¥').setId('info');
   panel.add(listBox);
   panel.add(infoLabel);
   app.add(panel);
  // return app;
   
   
-//  var Q1= app.createRadioButton('Q',' «ØÄ³¦^õX');
-//  var Q2= app.createRadioButton('Q',' °İÃD¿Ô¸ß'); 
-//  var Q3= app.createRadioButton('Q',' ¿ù»~¦^³ø'); 
-//  var Q4= app.createRadioButton('Q',' ¨ä¥L'); 
+//  var Q1= app.createRadioButton('Q',' å»ºè­°å›é¥‹');
+//  var Q2= app.createRadioButton('Q',' å•é¡Œè«®è©¢'); 
+//  var Q3= app.createRadioButton('Q',' éŒ¯èª¤å›å ±'); 
+//  var Q4= app.createRadioButton('Q',' å…¶ä»–'); 
   
-  var nameLabel = app.createLabel('©m¦W');
+  var nameLabel = app.createLabel('å§“å');
   var nameTextBox = app.createTextBox().setWidth('150px').setName('name');
  
-  var depLabel = app.createLabel('³B«Ç');
+  var depLabel = app.createLabel('è™•å®¤');
   var depTextBox = app.createTextBox().setWidth('150px').setName('dep');
   
-  var telLabel = app.createLabel('¤À¾÷');
+  var telLabel = app.createLabel('åˆ†æ©Ÿ');
   var telTextBox = app.createTextBox().setWidth('150px').setName('tel');
   
   
-  var messageLabel = app.createLabel('¯d¨¥¤º®e');
+  var messageLabel = app.createLabel('ç•™è¨€å…§å®¹');
   var messageTextArea = app.createTextArea().setWidth('250px').setHeight('200px').setName('message');
-  var submitButton = app.createButton('°e¥X');
-  var infoLabel = app.createLabel('¦¨¥\°e¥X.')
+  var submitButton = app.createButton('é€å‡º');
+  var infoLabel = app.createLabel('æˆåŠŸé€å‡º.')
       .setVisible(false).setId('info');
 
 
@@ -73,7 +73,7 @@ function doGet(){
   return app;
 } */
 /**********************************************/
-function getValuesFromForm(form){
+function getValuesFromForm(comment_form){
   var name = form.name,
       Q= form.Q,
       tel = form.tel,
@@ -85,8 +85,8 @@ function getValuesFromForm(form){
   
    MailApp.sendEmail({
      to: "jasmine@email.esunbank.com.tw.test-google-a.com  ",
-     subject: "¦¬¨ì¤@«h¦^ÂĞ",
-     htmlBody: "¦¬¨ì¤@«h¨Ó¦Û¥Éªá¶éªº·N¨£¦^ÂĞ, <br> ¯d¨¥¤H: "+name+" <br>¯d¨¥¤º®e: "+message +"<br>¬d¬İ¦^ÂĞµ²ªG:https://docs.google.com/spreadsheets/d/1Qmk5uERi4oW6swAT-P_ysOTTkyDtYaBVEdJiNXUREzU/edit#gid=0 "
+     subject: "You receive a comment",
+     htmlBody: "You receive a comment from your website, <br> Name: "+name+" <br>Message: "+message +"<br>To watch the results :https://docs.google.com/spreadsheets/d/1Qmk5uERi4oW6swAT-P_ysOTTkyDtYaBVEdJiNXUREzU/edit#gid=0 "
    });
 }
 
